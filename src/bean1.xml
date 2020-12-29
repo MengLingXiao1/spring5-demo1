@@ -7,4 +7,9 @@
         <property name="bname" value="testbook"></property>
         <property name="bauthor" value="tester"></property>
     </bean>
+    <bean id = "order" class="com.test.spring5.Order">
+
+        <constructor-arg name="oname" value="abc"/>
+        <constructor-arg name="address" value="China"/>
+    </bean>
 </beans>
