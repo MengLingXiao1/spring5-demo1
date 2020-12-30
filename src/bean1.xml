@@ -12,4 +12,19 @@
         <constructor-arg name="oname" value="abc"/>
         <constructor-arg name="address" value="China"/>
     </bean>
+    <bean id="userService" class="com.test.spring5.service.UserService">
+        <property name="userDao" ref="userDaoImpl"></property>
+    </bean>
+    <bean id="userDaoImpl" class="com.test.spring5.dao.UserDapImpl"></bean>
+
+
+    <bean id="emp" class="com.test.spring5.bean.Emp">
+        <property name="ename" value="mlx"></property>
+        <property name="gender" value="男"></property>
+        <property name="dept">
+            <bean id="dept" class="com.test.spring5.bean.Dept">
+                <property name="dname" value="安保部"></property>
+            </bean>
+        </property>
+    </bean>
 </beans>
