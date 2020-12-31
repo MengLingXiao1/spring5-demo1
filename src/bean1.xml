@@ -17,7 +17,7 @@
     </bean>
     <bean id="userDaoImpl" class="com.test.spring5.dao.UserDapImpl"></bean>
 
-
+    <!--    内部bean-->
     <bean id="emp" class="com.test.spring5.bean.Emp">
         <property name="ename" value="mlx"></property>
         <property name="gender" value="男"></property>
@@ -27,4 +27,5 @@
             </bean>
         </property>
     </bean>
+
 </beans>

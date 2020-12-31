@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emp" class="com.test.spring5.bean.Emp">
+        <property name="ename" value="mlx"></property>
+        <property name="gender" value="男"></property>
+        <property name="dept" ref="dept"></property>
+    </bean>
+    <bean id="dept" class="com.test.spring5.bean.Dept">
+        <property name="dname" value="安保部"></property>
+    </bean>
+
+    <bean id="stu" class="com.test.spring5.collectionType.Stu">
+        <property name="courses">
+            <array>
+                <value>java</value>
+                <value>python</value>
+                <value>c++</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>法外狂徒</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="JAVA" value="java"></entry>
+                <entry key="PYTHON" value="python"></entry>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>Mysql</value>
+                <value>Redis</value>
+            </set>
+        </property>
+    </bean>
+</beans>
