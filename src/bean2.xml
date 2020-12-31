@@ -37,5 +37,17 @@
                 <value>Redis</value>
             </set>
         </property>
+        <property name="courseList">
+            <list>
+                <ref bean="coures1"></ref>
+                <ref bean="course2"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean id="coures1" class="com.test.spring5.collectionType.Course">
+        <property name="cname" value="Srping5框架"></property>
+    </bean>
+    <bean id="course2" class="com.test.spring5.collectionType.Course">
+        <property name="cname" value="Mybatis框架"></property>
     </bean>
 </beans>
