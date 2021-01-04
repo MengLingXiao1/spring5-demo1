@@ -3,6 +3,7 @@ package testdemo;
 import com.test.spring5.Book;
 import com.test.spring5.Order;
 import com.test.spring5.User;
+import com.test.spring5.autowire.Emp1;
 import com.test.spring5.bean.Emp;
 import com.test.spring5.collectionType.Stu;
 import com.test.spring5.service.UserService;
@@ -62,5 +63,13 @@ public class TestSpring5 {
         Stu stu = context.getBean("stu", Stu.class);
         System.out.println(stu);
         stu.test();
+    }
+
+    @Test
+    public void testBean5(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean3.xml");
+        Emp1 emp1 = context.getBean("emp1", Emp1.class);
+        System.out.println(emp1);
+        emp1.test();
     }
 }
